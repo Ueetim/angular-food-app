@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodService } from '../services/food/food.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  // declare food property
+  foods:String[] = [];
+
+  constructor(private foodService:FoodService) { }
 
   ngOnInit(): void {
+    // fill the food variable with foods from the food service
+    this.foods = this.foodService.getAll();
   }
 
 }
