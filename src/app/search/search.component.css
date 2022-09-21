@@ -1,15 +1,20 @@
+.main{
+    position: sticky;
+    top: 61px;
+    z-index: 100;
+    background-color: white;
+    padding: 1rem 0;
+}
+
 .search-con {
     display: flex;
     align-items: center;
     justify-content: center;
     width: max-content;
-    margin: 2rem auto 1.5rem auto;
     background-color: #f2f2f2;
     padding: 0 1rem;
     border-radius: 2rem;
-    position: sticky;
-    top: 70px;
-    z-index: 100;
+    margin: auto;
 }
 
 input {

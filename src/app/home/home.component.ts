@@ -24,6 +24,9 @@ export class HomeComponent implements OnInit {
       if (params?.['searchTerm']){
         // search for foods that contain the search term
         this.foods = this.foodService.getAll().filter(food => food.name.toLowerCase().includes(params?.['searchTerm'].toLowerCase()));
+      } else if (params?.['tag']) {
+        // check for food that have the tag
+        this.foods = this.foodService.getAllFoodsByTag(params?.['tag']);
       } else {
         // fill the food variable with all foods from the food service
         this.foods = this.foodService.getAll();

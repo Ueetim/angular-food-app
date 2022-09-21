@@ -9,13 +9,15 @@ import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './search/search.component';
 
 import { FormsModule } from '@angular/forms';
+import { AutofocusDirective } from './autofocus.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 <div class="main">
     <div class="search-con">
-        <input type="text" placeholder="Search Food Fusion!" [(ngModel)]="searchTerm" (input)="search()" #myInput>
+        <input type="text" placeholder="Search Food Fusion!" [(ngModel)]="searchTerm" (input)="search()" appAutofocus>
         <i class="fas fa-search"></i>
     </div>
 </div>
 <!-- force autofocus on input field -->
-{{ myInput.focus() }}
+<!-- {{ myInput.focus() }} -->

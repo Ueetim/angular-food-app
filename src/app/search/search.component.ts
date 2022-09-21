@@ -12,6 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   searchTerm: String = "";
+  
+  inputmode: String = 'none';
 
   constructor(private route: ActivatedRoute, private router:Router) { }
 
