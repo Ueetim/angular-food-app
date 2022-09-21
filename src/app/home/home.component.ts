@@ -9,7 +9,7 @@ import { FoodService } from '../services/food/food.service';
 export class HomeComponent implements OnInit {
 
   // declare food property
-  foods:String[] = [];
+  foods:any = [];
 
   constructor(private foodService:FoodService) { }
 
