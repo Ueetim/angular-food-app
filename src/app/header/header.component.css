@@ -1,0 +1,36 @@
+header {
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid var(--primary);
+}
+
+a {
+    color: #af1313;
+    transition: .2s;
+}
+
+a:hover {
+    background-color: var(--primary);
+    color: white;
+    transition: .2s;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.logo {
+    font-weight: bold;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    padding: 1em;
+    display: inline-block;
+}
