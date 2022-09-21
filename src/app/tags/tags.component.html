@@ -1,5 +1,16 @@
-<div *ngIf="tags">
-  <a *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
-    {{tag.name}}({{tag.count}})
-  </a>
+<div *ngIf="tags" class="tags-con">
+  <div *ngIf="!foodPageTags">
+    <button *ngFor="let tag of tags"
+      routerLink="/tag/{{tag.name}}"
+      (click)="updateCurrentTag(tag.name)"
+      class="{{currentTag == tag.name ? 'current-tag':''}}">
+        {{tag.name}}({{tag.count}})
+    </button>
+  </div>
+
+  <div *ngIf="foodPageTags">
+    <button *ngFor="let tagName of foodPageTags">
+      {{tagName}}
+    </button>
+  </div>
 </div>

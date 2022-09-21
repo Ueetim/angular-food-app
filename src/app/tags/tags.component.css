@@ -1,0 +1,31 @@
+.tags-con {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  background-color: white;
+  position: sticky;
+  top: 132px;
+  z-index: 1000;
+  padding-bottom: 1rem;
+}
+
+button {
+  border: none;
+  background-color: #f1f1f1;
+  color: var(--primary);
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+}
+
+.current-tag {
+  background-color: var(--primary);
+  color: white;
+}
+
+@media only screen and (max-width: 550px){
+  .tags-con {
+    display: none;
+  }
+}
