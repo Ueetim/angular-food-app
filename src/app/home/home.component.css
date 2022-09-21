@@ -1,0 +1,33 @@
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+li a {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid whitesmoke;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--primary);
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+li a:hover {
+    opacity: 90%;
+    transition: .2s;
+}
+
+li a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
