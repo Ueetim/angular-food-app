@@ -8,6 +8,7 @@ ul {
 
 li a {
     border: 1px solid #fce6e6;
+    max-width: 18rem;
     margin: 0.5rem;
     border-radius: 0.3rem;
     display: flex;
@@ -48,7 +49,6 @@ li a img {
 
 .name {
     font-size: 0.95rem;
-    font-weight: 600;
 }
 
 .product-item-footer {
@@ -61,4 +61,5 @@ li a img {
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 0.5rem;
+    color: #646262;
 }

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
 import { Food } from '../shared/models/food';
 
+// multiple routes lead to home component. So use ActivatedRoute to know
+// which one to activate
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,11 +16,20 @@ export class HomeComponent implements OnInit {
   // declare food property
   foods:Food[] = [];
 
-  constructor(private foodService:FoodService) { }
+  constructor(private foodService:FoodService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    // fill the food variable with foods from the food service
-    this.foods = this.foodService.getAll();
+    // listen for route parameters
+    this.route.params.subscribe(params => {
+      if (params?.['searchTerm']){
+        // search for foods that contain the search term
+        this.foods = this.foodService.getAll().filter(food => food.name.toLowerCase().includes(params?.['searchTerm'].toLowerCase()));
+      } else {
+        // fill the food variable with all foods from the food service
+        this.foods = this.foodService.getAll();
+      }
+    })
+
   }
 
 }
