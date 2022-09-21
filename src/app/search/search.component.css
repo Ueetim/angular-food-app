@@ -1,0 +1,32 @@
+.search-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin: 2rem auto 1.5rem auto;
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 300px;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+i {
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 520px) {
+    input {
+        width: 185px;
+    }
+}
