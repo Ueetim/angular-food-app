@@ -1,15 +1,13 @@
 ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     list-style-type: none;
+    margin: 1rem 0;
+    display: grid;
+    grid-gap: 0.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
 li a {
-    height: 10rem;
-    width: 10rem;
-    border: 1px solid whitesmoke;
+    border: 1px solid #fce6e6;
     margin: 0.5rem;
     border-radius: 0.3rem;
     display: flex;
@@ -17,17 +15,50 @@ li a {
     overflow: hidden;
     color: var(--primary);
     cursor: pointer;
-    transition: opacity .2s;
+    transition: .2s;
 }
 
 li a:hover {
-    opacity: 90%;
+    opacity: 80%;
+    box-shadow: 0px 2px 5px #00000034;
+    transform: translateY(-2px);
     transition: .2s;
 }
 
 li a img {
-    height: 100%;
+    height: 12rem;
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.not {
+    color: #b8b5b5;
+}
+
+.content {
+    padding: 10px;
+}
+
+.name-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.product-item-footer {
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    color: gray;
+}
+
+.price {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
