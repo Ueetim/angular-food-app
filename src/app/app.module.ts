@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 
 import { FormsModule } from '@angular/forms';
 import { AutofocusDirective } from './autofocus.directive';
+import { TagsComponent } from './tags/tags.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AutofocusDirective } from './autofocus.directive';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    AutofocusDirective
+    AutofocusDirective,
+    TagsComponent
   ],
   imports: [
     BrowserModule,
