@@ -1,0 +1,36 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: calc(100vh - 150px);
+}
+
+div a button {
+  height: 2.3rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .2s;
+}
+
+div a button:hover {
+  background-color: #af0a0a;
+  transition: .2s;
+}
+
+p {
+  margin: 1rem 0 0.8rem 0;
+  text-align: center;
+}
+
+img {
+  height: 10rem;
+}

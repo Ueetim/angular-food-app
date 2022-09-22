@@ -1,38 +1,42 @@
-<div class="container">
-  <div class="img-con">
-    <img [src]="food.imageUrl" alt="food.name">
-  </div>
-  <div class="details">
-    <div class="header">
-      <span class="name">{{food.name}}</span>
-      <span class="favorite {{food.favorite?'':'not'}}">&hearts;</span>
-    </div>
-    <div class="rating">
-      <star-rating
-        [value]="food.stars"
-        [totalstars]='5'
-        checkedcolor='#ce0b0b'
-        uncheckedcolor='#ccc'
-        size='20px'
-        [readonly]='true'></star-rating>
-    </div>
-    <div class="origins">
-      <span *ngFor="let origin of food.origins">{{origin}}</span>
-    </div>
-    <div class="tags">
-      <app-tags [foodPageTags]="food.tags"></app-tags>
-    </div>
+<app-not-found [visible]="!food" notFoundMessage="Oops!! The requested food is not available!" resetLinkText="Back to Home Page" imageUrl="/assets/images/not-found/empty-list.svg"></app-not-found>
 
-    <div class="cook-time">
-      <span>
-        Time to cook: About <strong>{{food.cookTime}}</strong> minutes
-      </span>
+<div *ngIf="food">
+  <div class="container">
+    <div class="img-con">
+      <img [src]="food.imageUrl" alt="food.name">
     </div>
+    <div class="details">
+      <div class="header">
+        <span class="name">{{food.name}}</span>
+        <span class="favorite {{food.favorite?'':'not'}}">&hearts;</span>
+      </div>
+      <div class="rating">
+        <star-rating
+          [value]="food.stars"
+          [totalstars]='5'
+          checkedcolor='#ce0b0b'
+          uncheckedcolor='#ccc'
+          size='20px'
+          [readonly]='true'></star-rating>
+      </div>
+      <div class="origins">
+        <span *ngFor="let origin of food.origins">{{origin}}</span>
+      </div>
+      <div class="tags">
+        <app-tags [foodPageTags]="food.tags"></app-tags>
+      </div>
 
-    <div class="price">
-      <span><span>Price:</span> ₦{{food.price}}</span>
+      <div class="cook-time">
+        <span>
+          Time to cook: About <strong>{{food.cookTime}}</strong> minutes
+        </span>
+      </div>
+
+      <div class="price">
+        <span><span>Price:</span> ₦{{food.price}}</span>
+      </div>
+
+      <button class="cart-btn" (click)="addToCart()">Add To Cart</button>
     </div>
-
-    <button class="cart-btn" (click)="addToCart()">Add To Cart</button>
   </div>
 </div>

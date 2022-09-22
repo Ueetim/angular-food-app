@@ -9,6 +9,8 @@ import { Food } from 'src/app/shared/models/food';
 export class CartService {
   private cart:Cart = new Cart();
 
+  cartLength:number = 0;
+
   constructor() { }
 
   addToCart(food: Food):void{
@@ -21,10 +23,12 @@ export class CartService {
 
     // if food doesnt exist
     this.cart.items.push(new CartItem(food));
+    this.cartLength++;
   }
 
   removeFromCart(foodId:number): void {
     this.cart.items = this.cart.items.filter(item => item.food.id != foodId);
+    this.cartLength--;
   }
 
   changeQuantity(foodId:number, quantity:number){

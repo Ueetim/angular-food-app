@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart/cart.service';
+import { Cart } from '../shared/models/Cart';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  // cart:Cart;
+  cartLength!:number;
+
+  constructor(private cartService: CartService) {
+    // this.cart = this.cartService.getCart();
+    // this.cartLength = this.cart.items.length;
+    this.cartLength = cartService.cartLength;
+  }
+
 
   ngOnInit(): void {
   }
