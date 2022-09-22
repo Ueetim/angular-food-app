@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { AutofocusDirective } from './autofocus.directive';
 import { TagsComponent } from './tags/tags.component';
 import { FoodPageComponent } from './food-page/food-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FoodPageComponent } from './food-page/food-page.component';
     SearchComponent,
     AutofocusDirective,
     TagsComponent,
-    FoodPageComponent
+    FoodPageComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
