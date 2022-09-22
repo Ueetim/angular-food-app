@@ -1,4 +1,4 @@
-<app-not-found [visible]="!cart || cart.items.length < 1" notFoundMessage="Cart is empty! Please add items" resetLinkText="+ Add Items To Cart" imageUrl="/assets/images/not-found/empty-cart.svg"></app-not-found>
+<app-not-found [visible]="!cart || cart.items.length < 1" notFoundMessage="Cart is empty! Please add items" resetLinkText="Add Items To Cart" imageUrl="/assets/images/not-found/empty-cart.svg"></app-not-found>
 
 <div *ngIf="cart && cart.items.length > 0" class="container">
   <ul>
@@ -21,7 +21,7 @@
           ₦{{cartItem.price}}
         </div>
       </div>
-      <div>
+      <div class="remove-btn-con">
         <button class="remove-btn" (click)="removeFromCart(cartItem)"><i class="fas fa-trash"></i> Remove</button>
       </div>
     </li>
@@ -31,6 +31,7 @@
     <div>
       <div class="foods-count"><span class="checkout-title">No. of Items: </span> {{cart.items.length}}</div>
       <div class="total-price"><span class="checkout-title">Price: </span>₦{{cart.totalPrice}}</div>
+      <button>Checkout</button>
     </div>
   </div>
 

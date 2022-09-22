@@ -58,14 +58,14 @@ export class FoodService {
       },
       {
         id: 6,
-        name: 'Beef Suya',
-        price: 500,
-        cookTime: '20-30',
-        favorite: true,
-        origins: ['Nigeria'],
-        stars: 5.0,
-        imageUrl: '/assets/images/foods/food6.jpeg',
-        tags: ['Lunch'],
+        name: 'Chicken Soup',
+        price: 1500,
+        cookTime: '50-60',
+        favorite: false,
+        origins: ['Europe', 'N. America'],
+        stars: 4.0,
+        imageUrl: '/assets/images/foods/food7.jpeg',
+        tags: ['Soup'],
       },
       {
         id: 5,
@@ -77,6 +77,28 @@ export class FoodService {
         stars: 3.0,
         imageUrl: '/assets/images/foods/food5.jpg',
         tags: ['FastFood', 'Burger', 'Lunch'],
+      },
+      {
+        id: 6,
+        name: 'Beef Suya',
+        price: 500,
+        cookTime: '20-30',
+        favorite: true,
+        origins: ['Nigeria'],
+        stars: 5.0,
+        imageUrl: '/assets/images/foods/food6.jpeg',
+        tags: ['Lunch'],
+      },
+      {
+        id: 8,
+        name: 'Goat Peppersoup',
+        price: 2500,
+        cookTime: '50-60',
+        favorite: true,
+        origins: ['Nigeria'],
+        stars: 5.0,
+        imageUrl: '/assets/images/foods/food8.jpeg',
+        tags: ['Soup'],
       },
     ]
   }
@@ -95,12 +117,13 @@ export class FoodService {
 
   getAllTags():Tag[]{
     return [
-      {name: 'All', count: 6},
+      {name: 'All', count: 8},
       {name: 'FastFood', count: 5},
       {name: 'Lunch', count: 5},
       {name: 'Burger', count: 2},
       {name: 'Snacks', count: 1},
       {name: 'Pizza', count: 1},
+      {name: 'Soup', count: 2},
     ]
   }
 

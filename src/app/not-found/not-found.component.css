@@ -3,7 +3,7 @@ div {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   height: calc(100vh - 150px);
 }
