@@ -3,13 +3,14 @@
   display: flex;
   align-items: center;
   margin: 2rem auto;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .img-con {
   height: 300px;
   width: 300px;
-  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -33,6 +34,14 @@
 .name {
   font-weight: 600;
   margin-bottom: 0.2rem;
+}
+
+.favorite {
+  color: var(--primary);
+}
+
+.not {
+  color: #d1d1d1;
 }
 
 .origins {
