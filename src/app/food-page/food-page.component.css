@@ -85,6 +85,27 @@
   background-color: #b30707;
 }
 
+.back-btn-con {
+  text-align: center;
+}
+
+.back-btn {
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  height: 30px;
+  width: 150px;
+  color: var(--primary);
+  background-color: white;
+  transition: .2s;
+  margin-top: 2rem;
+}
+
+.back-btn:hover {
+  background-color: var(--primary);
+  color: white;
+  transition: .2s;
+}
+
 @media only screen and (max-width: 650px){
   .container {
     flex-direction: column;

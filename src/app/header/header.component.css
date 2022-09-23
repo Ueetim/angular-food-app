@@ -12,16 +12,11 @@ a {
     transition: .2s;
 }
 
-a:hover {
-    background-color: var(--primary);
-    color: white;
-    transition: .2s;
-}
-
 .container {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 a.logo {
@@ -36,4 +31,21 @@ nav ul {
 nav ul li a {
     padding: 1em;
     display: inline-block;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background-color: var(--primary);
+  transition: .2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b60c0c;
+  transition: .2s;
 }

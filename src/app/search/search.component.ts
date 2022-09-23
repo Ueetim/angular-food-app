@@ -12,10 +12,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   searchTerm: String = "";
-  
-  inputmode: String = 'none';
 
-  constructor(private route: ActivatedRoute, private router:Router) { }
+  searchBar:any = localStorage.getItem('searchBar');
+  // searchEnabled:boolean = true;
+
+  constructor(private route: ActivatedRoute, private router:Router) {
+    localStorage.setItem('searchBar', 'false');
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(params =>{
@@ -32,6 +35,12 @@ export class SearchComponent implements OnInit {
       this.router.navigateByUrl('/search/' + this.searchTerm);
     } else {
       this.router.navigateByUrl('/');
+      localStorage.setItem('searchBar', 'true');
     }
+  }
+
+  searchItem():void{
+    this.searchBar = 'true';
+    localStorage.setItem('searchBar', 'true');
   }
 }

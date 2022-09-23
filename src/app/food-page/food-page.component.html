@@ -1,6 +1,10 @@
 <app-not-found [visible]="!food" notFoundMessage="Oops!! The requested food is not available!" resetLinkText="Back to Home Page" imageUrl="/assets/images/not-found/empty-list.svg"></app-not-found>
 
 <div *ngIf="food">
+  <div class="back-btn-con">
+    <button routerLink="/" class="back-btn"><i class="fas fa-home"></i> See all products</button>
+  </div>
+
   <div class="container">
     <div class="img-con">
       <img [src]="food.imageUrl" alt="food.name">
@@ -8,7 +12,7 @@
     <div class="details">
       <div class="header">
         <span class="name">{{food.name}}</span>
-        <span class="favorite {{food.favorite?'':'not'}}">&hearts;</span>
+        <span class="favorite {{food.favorite?'':'not'}}"><i class="fas fa-heart"></i></span>
       </div>
       <div class="rating">
         <star-rating
