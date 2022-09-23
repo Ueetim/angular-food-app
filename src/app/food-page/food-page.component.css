@@ -79,6 +79,10 @@
   transition: .2s;
   border-radius: 20px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .cart-btn:hover {
@@ -98,6 +102,10 @@
   background-color: white;
   transition: .2s;
   margin-top: 2rem;
+}
+
+.plus {
+  font-size: 1.1rem;
 }
 
 .back-btn:hover {

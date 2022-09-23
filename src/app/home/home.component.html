@@ -1,7 +1,12 @@
 <app-search></app-search>
 <app-tags></app-tags>
 
-<app-not-found [visible]="!foods || foods.length < 1" notFoundMessage="Oops!! The requested food is not available!" resetLinkText="Back to Home Page" imageUrl="/assets/images/not-found/empty-list.svg"></app-not-found>
+<app-not-found
+  [visible]="!foods || foods.length < 1"
+  notFoundMessage="Oops!! The requested food is not available!"
+  resetLinkText="&lArr; Back to Home Page"
+  imageUrl="/assets/images/not-found/empty-list.svg">
+</app-not-found>
 
 <ul>
     <li *ngFor="let food of foods">
