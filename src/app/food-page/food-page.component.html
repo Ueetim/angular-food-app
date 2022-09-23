@@ -36,7 +36,8 @@
         <span><span>Price:</span> ₦{{food.price}}</span>
       </div>
 
-      <button class="cart-btn" (click)="addToCart()">Add To Cart</button>
+      <button class="cart-btn" (click)="addToCart()" *ngIf="!itemInCart">Add To Cart</button>
+      <button class="cart-btn" style="background-color: #949494; cursor: default" *ngIf="itemInCart">Item already in cart</button>
     </div>
   </div>
 </div>

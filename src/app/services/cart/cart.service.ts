@@ -7,7 +7,7 @@ import { Food } from 'src/app/shared/models/food';
   providedIn: 'root'
 })
 export class CartService {
-  private cart:Cart = new Cart();
+  cart:Cart = new Cart();
 
   cartLength:number = 0;
 
@@ -17,7 +17,7 @@ export class CartService {
     // check if food already exists in cart
     let cartItem = this.cart.items.find(item=>item.food.id === food.id);
     if (cartItem) {
-      this.changeQuantity(food.id, cartItem.quantity + 1);
+      // this.changeQuantity(food.id, cartItem.quantity + 1);
       return;
     }
 

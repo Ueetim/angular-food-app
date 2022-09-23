@@ -107,6 +107,10 @@ ul select {
   color: gray;
 }
 
+.total-price {
+  margin: 2rem 0;
+}
+
 .checkout button {
   height: 30px;
   width: 100%;

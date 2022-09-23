@@ -12,6 +12,7 @@ import { CartService } from '../services/cart/cart.service';
 export class FoodPageComponent implements OnInit {
 
   food!: Food;
+  itemInCart: boolean = false;
 
   constructor(private activatedRoute:ActivatedRoute,
     private foodService: FoodService,
@@ -20,6 +21,14 @@ export class FoodPageComponent implements OnInit {
     activatedRoute.params.subscribe((params)=>{
       if (params?.['id']) {
         this.food = foodService.getFoodById(params?.['id']);
+      }
+
+      // check if food exists in cart
+      let cartItem = cartService.cart.items.find(item=>item.food.id === this.food.id);
+      if (cartItem){
+        this.itemInCart = true;
+      } else {
+        this.itemInCart = false;
       }
     })
   }
@@ -31,5 +40,6 @@ export class FoodPageComponent implements OnInit {
     this.cartService.addToCart(this.food);
     this.router.navigateByUrl('/cart-page');
   }
+
 
 }

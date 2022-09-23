@@ -10,7 +10,7 @@
         <div class="name">
           <a routerLink="/food/{{cartItem.food.id}}">{{cartItem.food.name}}</a>
         </div>
-        <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+        <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)" value="{{cartItem.quantity}}">
           <option>1</option>
           <option>2</option>
           <option>3</option>

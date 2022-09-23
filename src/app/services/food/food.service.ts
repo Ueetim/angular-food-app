@@ -57,7 +57,7 @@ export class FoodService {
         tags: ['FastFood', 'Pizza', 'Lunch'],
       },
       {
-        id: 6,
+        id: 7,
         name: 'Chicken Soup',
         price: 1500,
         cookTime: '50-60',
