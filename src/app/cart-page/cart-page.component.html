@@ -10,7 +10,7 @@
         <div class="name">
           <a routerLink="/food/{{cartItem.food.id}}">{{cartItem.food.name}}</a>
         </div>
-        <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+        <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)" value={{cartItem.quantity}}>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -31,7 +31,8 @@
     <div>
       <div class="foods-count"><span class="checkout-title">No. of Items: </span> {{cart.items.length}}</div>
       <div class="total-price"><span class="checkout-title">Price: </span>₦{{cart.totalPrice}}</div>
-      <button>Checkout</button>
+      <button class="add-more" routerLink="/"><i class="fa-solid fa-burger"></i> Add more foods</button>
+      <button class="checkout-btn" routerLink="/error"><i class="fas fa-credit-card"></i> Checkout</button>
     </div>
   </div>
 

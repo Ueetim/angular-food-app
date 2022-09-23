@@ -116,9 +116,30 @@ ul select {
   width: 100%;
   border: 1px solid var(--primary);
   border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.checkout-btn{
   background-color: white;
   color: var(--primary);
-  margin-top: 10px;
+  transition: .2s;
+}
+
+.checkout-btn:hover{
+  background-color: #f5d7d7;
+  transition: .2s;
+}
+
+.add-more {
+  color: white;
+  background-color: var(--primary);
+  transition: .2s;
+}
+
+.add-more:hover {
+  background-color: #ad0e0e;
+  transition: .2s;
 }
 
 @media only screen and (max-width: 750px){

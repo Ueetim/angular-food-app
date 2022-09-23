@@ -9,6 +9,7 @@ div {
 }
 
 div a button {
+  font-weight: 900;
   height: 2.3rem;
   background-color: var(--primary);
   color: white;
