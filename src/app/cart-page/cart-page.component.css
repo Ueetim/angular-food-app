@@ -78,6 +78,10 @@ ul select {
   width: 150px;
 }
 
+.price {
+  margin: 0.6rem 0;
+}
+
 .remove-btn {
   border: none;
   border-radius: 5px;
@@ -112,7 +116,7 @@ ul select {
 }
 
 .checkout button {
-  height: 30px;
+  height: 35px;
   width: 100%;
   border: 1px solid var(--primary);
   border-radius: 20px;
