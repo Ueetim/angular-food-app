@@ -14,7 +14,6 @@ export class SearchComponent implements OnInit {
   searchTerm: String = "";
 
   searchBar:any = localStorage.getItem('searchBar');
-  // searchEnabled:boolean = true;
 
   constructor(private route: ActivatedRoute, private router:Router) {
     localStorage.setItem('searchBar', 'false');
@@ -27,12 +26,14 @@ export class SearchComponent implements OnInit {
         this.searchTerm = params?.['searchTerm'];
       }
     })
+    localStorage.getItem('searchBar')
   }
 
   search():void{
     // check if there is a search term in the search box
     if(this.searchTerm){
       this.router.navigateByUrl('/search/' + this.searchTerm);
+      localStorage.setItem('searchBar', 'true');
     } else {
       this.router.navigateByUrl('/');
       localStorage.setItem('searchBar', 'true');

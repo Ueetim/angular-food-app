@@ -9,7 +9,7 @@ import { Food } from 'src/app/shared/models/food';
 export class CartService {
   cart:Cart = new Cart();
 
-  // cartLength:number = 0;
+  cartLength:number = 0;
 
   constructor() { }
 
@@ -17,19 +17,18 @@ export class CartService {
     // check if food already exists in cart
     let cartItem = this.cart.items.find(item=>item.food.id === food.id);
     if (cartItem) {
-      // this.changeQuantity(food.id, cartItem.quantity + 1);
+      this.changeQuantity(food.id, cartItem.quantity + 1);
       return;
     }
 
     // if food doesnt exist
     this.cart.items.push(new CartItem(food));
-    // this.cartLength++;
-
+    this.cartLength++;
   }
 
   removeFromCart(foodId:number): void {
     this.cart.items = this.cart.items.filter(item => item.food.id != foodId);
-    // this.cartLength--;
+    this.cartLength--;
   }
 
   changeQuantity(foodId:number, quantity:number){
