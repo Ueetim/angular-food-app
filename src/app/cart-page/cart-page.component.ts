@@ -14,6 +14,8 @@ export class CartPageComponent implements OnInit {
 
   options:number[] = [];
 
+  totalPrice!: number;
+
   constructor(private cartService: CartService) {
     this.setCart();
 
@@ -29,6 +31,7 @@ export class CartPageComponent implements OnInit {
 
   setCart(){
     this.cart = this.cartService.getCart();
+    this.total();
   }
 
   removeFromCart(cartItem:CartItem){
@@ -46,5 +49,7 @@ export class CartPageComponent implements OnInit {
     this.cart = this.cartService.clearCart();
   }
 
-
+  total() {
+    this.totalPrice = this.cartService.totalPrice();
+  }
 }

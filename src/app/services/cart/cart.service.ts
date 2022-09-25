@@ -60,5 +60,15 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this.cart));
     return this.cart;
   }
+
+  totalPrice(): number {
+    let totalPrice = 0;
+
+    // total price for each item and add to give total price
+    this.cart.items.forEach(item=>{
+      totalPrice += item.itemPrice;
+    });
+    return totalPrice;
+  }
 }
 
