@@ -24,6 +24,7 @@ export class CartService {
     // if food doesnt exist
     this.cart.items.push(new CartItem(food));
     this.cartLength++;
+    localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
   removeFromCart(foodId:number): void {
@@ -38,6 +39,11 @@ export class CartService {
   }
 
   getCart():Cart{
+    return this.cart;
+  }
+
+  clearCart(){
+    this.cart = new Cart();
     return this.cart;
   }
 }
