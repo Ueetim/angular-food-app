@@ -12,8 +12,15 @@ export class CartPageComponent implements OnInit {
 
   cart!: Cart;
 
+  options:number[] = [];
+
   constructor(private cartService: CartService) {
     this.setCart();
+
+    // array of numbers for options list
+    for (let i = 1; i <= 20; i++){
+      this.options.push(i);
+    }
   }
 
   ngOnInit(): void {
@@ -38,4 +45,6 @@ export class CartPageComponent implements OnInit {
   clearCart(){
     this.cart = this.cartService.clearCart();
   }
+
+
 }
