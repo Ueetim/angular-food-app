@@ -9,7 +9,7 @@ export class Cart {
 
     // total price for each item and add to give total price
     this.items.forEach(item=>{
-      totalPrice += item.price;
+      totalPrice += item.itemPrice;
     });
     return totalPrice;
   }
