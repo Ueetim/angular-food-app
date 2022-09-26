@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RatingModule } from 'ng-starrating';
+
 import { SearchComponent } from './search/search.component';
 
 import { FormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     CartPageComponent,
     NotFoundComponent,
     FooterComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

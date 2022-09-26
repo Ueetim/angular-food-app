@@ -11,7 +11,7 @@ export class NotFoundComponent implements OnInit {
   @Input() notFoundMessage:string = "Nothing Found!";
   @Input() resetLinkText:string = "Reset";
   @Input() imageUrl:string = "";
-  @Input() resetLinkRoute:string = "/";
+  @Input() resetLinkRoute:string = "/products";
 
   constructor() { }
 

@@ -1,13 +1,15 @@
+<app-header></app-header>
+
 <app-not-found
   [visible]="!food"
   notFoundMessage="Oops!! The requested food is not available!"
-  resetLinkText="Back to Home Page"
+  resetLinkText="Back to products page"
   imageUrl="/assets/images/not-found/empty-list.svg">
 </app-not-found>
 
 <div *ngIf="food">
   <div class="back-btn-con">
-    <button routerLink="/" class="back-btn"><i class="fa-solid fa-shrimp"></i> See all foods</button>
+    <button routerLink="/products" class="back-btn"><i class="fa-solid fa-shrimp"></i> See all foods</button>
   </div>
 
   <div class="container">

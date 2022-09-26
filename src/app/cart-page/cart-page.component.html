@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <app-not-found
   [visible]="!cart || cart.items.length < 1"
   notFoundMessage="Cart is empty! Please add items"
@@ -37,7 +39,7 @@
     <div>
       <div class="foods-count"><span class="checkout-title">No. of Items: </span> {{cart.items.length}}</div>
       <div class="total-price"><span class="checkout-title">Price: </span>₦{{totalPrice}}</div>
-      <button class="add-more" routerLink="/"><i class="fa-solid fa-burger"></i> Add more foods</button>
+      <button class="add-more" routerLink="/products"><i class="fa-solid fa-burger"></i> Add more foods</button>
       <button class="checkout-btn" routerLink="/error"><i class="fas fa-credit-card"></i> Checkout</button>
     </div>
   </div>
