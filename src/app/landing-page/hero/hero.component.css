@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: calc(100vh - 4rem);
 }
 
 .hero-img {
@@ -31,8 +32,10 @@
 }
 
 .hero-txt h1 {
-  font-size: 4rem;
-  line-height: 70px;
+  /* font-size: 4rem; */
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: clamp(40px, 6vw, 75px);
+  /* line-height: 75px; */
 }
 
 .hero-txt h1 span {
@@ -40,13 +43,17 @@
 }
 
 .hero-txt p {
-  line-height: 30px;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  /* line-height: 30px; */
+  line-height: clamp(30px, 5vw, 35px);
   margin-top: 1rem;
 }
 
 .hero-txt button {
   height: 40px;
   width: 150px;
+  font-size: 1rem;
+  /* font-size: clamp(1rem, 2.5vw, 1.4rem); */
   background-color: var(--primary);
   color: white;
   border: none;

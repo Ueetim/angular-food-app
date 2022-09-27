@@ -1,0 +1,21 @@
+h1, h2, h3 {
+  /* Font minimum, preferred and maximum value */
+  font-size: clamp(var(--min), var(--val), var(--max));
+}
+
+/* Font size variables */
+h1 {
+  --min: 8em; /* minimum value */
+  --val: 25vw; /* preferred value = 5% viewport width */
+  --max: 10rem; /* maximum value */
+}
+h2 {
+  --min: 1.7em;   /* minimum value */
+  --val: 4vw;     /* preferred value = 4% viewport width */
+  --max: 3em;  /* maximum value */
+}
+h3 {
+  --min: 1.5rem;   /* minimum value */
+  --val: 4vw;     /* preferred value = 4% viewport width */
+  --max: 2.5rem;  /* maximum value */
+}
