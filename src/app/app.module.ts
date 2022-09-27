@@ -20,6 +20,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavComponent } from './landing-page/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     NotFoundComponent,
     FooterComponent,
     ErrorPageComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

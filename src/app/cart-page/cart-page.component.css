@@ -99,6 +99,8 @@ ul select {
 .clear-all {
   height: 35px;
   min-height: 35px;
+  width: 200px;
+  margin: auto;
   border: 1px solid var(--primary);
   background-color: white;
   color: var(--primary);
@@ -142,13 +144,16 @@ ul select {
 }
 
 .checkout-btn{
-  background-color: white;
-  color: var(--primary);
+  background-color: #016801;
+  /* color: var(--primary); */
+  color: white;
+  border: none !important;
   transition: .2s;
 }
 
 .checkout-btn:hover{
-  background-color: #f5d7d7;
+  /* background-color: #f5d7d7; */
+  background-color: #0a8a0a;
   transition: .2s;
 }
 

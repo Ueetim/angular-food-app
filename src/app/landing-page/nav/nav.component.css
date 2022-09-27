@@ -1,0 +1,49 @@
+nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ff000083;
+}
+
+nav a {
+  color: black;
+}
+
+.logo a {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--gray);
+  transition: .2s;
+}
+
+nav ul a:hover {
+  color: var(--primary);
+  transition: .2s;
+}
+
+nav ul button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 3px;
+  transition: .2s;
+}
+
+nav ul button:hover {
+  background-color: var(--primary);
+  color: white;
+  transition: .2s;
+}
