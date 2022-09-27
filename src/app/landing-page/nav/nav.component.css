@@ -3,7 +3,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   border-bottom: 1px solid #ff000083;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {

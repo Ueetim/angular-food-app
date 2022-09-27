@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavComponent } from './landing-page/nav/nav.component';
+import { HeroComponent } from './landing-page/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NavComponent } from './landing-page/nav/nav.component';
     FooterComponent,
     ErrorPageComponent,
     LandingPageComponent,
-    NavComponent
+    NavComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,

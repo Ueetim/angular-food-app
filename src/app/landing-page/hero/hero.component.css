@@ -1,0 +1,67 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img-icon {
+  height: 4rem;
+  position: absolute;
+}
+
+.pepper {
+  right: 30px;
+  top: 70px;
+  z-index: 100;
+}
+
+.catnip {
+  bottom: 40px;
+  left: 40px;
+}
+
+.tomatoes {
+  bottom: 70px;
+  right: 30px;
+}
+
+.hero-txt h1 {
+  font-size: 4rem;
+  line-height: 70px;
+}
+
+.hero-txt h1 span {
+  color: var(--primary);
+}
+
+.hero-txt p {
+  line-height: 30px;
+  margin-top: 1rem;
+}
+
+.hero-txt button {
+  height: 40px;
+  width: 150px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.hero-txt button > i {
+  margin-left: 0.8rem;
+}
+
+.hero-txt button:hover{
+  background-color: #b40303;
+  box-shadow: 0 3px 5px #00000042;
+  transition: .2s;
+}
