@@ -22,6 +22,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavComponent } from './landing-page/nav/nav.component';
 import { HeroComponent } from './landing-page/hero/hero.component';
+import { AboutComponent } from './landing-page/about/about.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HeroComponent } from './landing-page/hero/hero.component';
     ErrorPageComponent,
     LandingPageComponent,
     NavComponent,
-    HeroComponent
+    HeroComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

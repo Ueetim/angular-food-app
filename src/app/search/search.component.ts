@@ -35,7 +35,7 @@ export class SearchComponent implements OnInit {
       this.router.navigateByUrl('/search/' + this.searchTerm);
       localStorage.setItem('searchBar', 'true');
     } else {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/products');
       localStorage.setItem('searchBar', 'true');
     }
   }

@@ -44,7 +44,6 @@
 
 .hero-txt p {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
-  /* line-height: 30px; */
   line-height: clamp(30px, 5vw, 35px);
   margin-top: 1rem;
 }
@@ -71,4 +70,24 @@
   background-color: #b40303;
   box-shadow: 0 3px 5px #00000042;
   transition: .2s;
+}
+
+@media only screen and (max-width: 900px){
+  .hero-img img:nth-child(1) {
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 690px){
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .hero-img img:nth-child(1) {
+    height: auto;
+    width: 100%;
+  }
 }
