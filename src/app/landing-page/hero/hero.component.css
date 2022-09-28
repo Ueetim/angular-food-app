@@ -90,5 +90,6 @@
   .hero-img img:nth-child(1) {
     height: auto;
     width: 100%;
+    max-width: 400px;
   }
 }
