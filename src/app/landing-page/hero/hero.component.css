@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
   height: calc(100vh - 4rem);
   max-height: 650px;
 }
@@ -17,19 +17,19 @@
 }
 
 .pepper {
-  right: 30px;
-  top: 70px;
+  right: 0px;
+  top: 20px;
   z-index: 100;
 }
 
 .catnip {
-  bottom: 40px;
-  left: 40px;
+  bottom: 20px;
+  left: 30px;
 }
 
 .tomatoes {
-  bottom: 70px;
-  right: 30px;
+  bottom: 50px;
+  right: 0px;
 }
 
 .hero-txt h1 {

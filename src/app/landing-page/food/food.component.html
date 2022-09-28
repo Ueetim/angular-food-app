@@ -1,0 +1,41 @@
+<div class="foods">
+  <h2>Popular <span>Foods</span></h2>
+  <p>Here are some of our best meals according to feedback gotten from hundreds of customers</p>
+  <div class="meals-con">
+    <!-- item -->
+    <ul>
+      <li *ngFor="let food of foods">
+        <a routerLink="/food/{{food.id}}">
+            <img src="{{food.imageUrl}}" alt="">
+            <div class="content">
+                <div class="name-header">
+                    <div class="name">{{food.name}}</div>
+                    <span class="favorite {{food.favorite?'':'not'}}"><i class="fas fa-heart"></i></span>
+                </div>
+                <star-rating
+                    [value]="food.stars"
+                    [totalstars]='5'
+                    checkedcolor='#ce0b0b'
+                    uncheckedcolor='#ccc'
+                    size='18px'
+                    [readonly]='true'></star-rating>
+                <div class="product-item-footer name-header">
+                    <div class="origins">
+                        <span *ngFor="let origin of food.origins">
+                            {{origin}}
+                        </span>
+                    </div>
+                    <div class="cook-time">
+                        <span>🕒</span>
+                        {{food.cookTime}} m
+                    </div>
+                </div>
+                <div class="price">
+                    ₦{{food.price}}
+                </div>
+            </div>
+        </a>
+    </li>
+    </ul>
+  </div>
+</div>
