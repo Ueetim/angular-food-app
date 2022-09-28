@@ -24,6 +24,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavComponent } from './landing-page/nav/nav.component';
 import { HeroComponent } from './landing-page/hero/hero.component';
 import { AboutComponent } from './landing-page/about/about.component';
+import { FoodComponent } from './landing-page/food/food.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AboutComponent } from './landing-page/about/about.component';
     LandingPageComponent,
     NavComponent,
     HeroComponent,
-    AboutComponent
+    AboutComponent,
+    FoodComponent
   ],
   imports: [
     BrowserModule,
