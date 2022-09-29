@@ -28,8 +28,7 @@ footer {
 }
 
 .input-field {
-  width: 100%;
-  max-width: 250px;
+  width: 220px;
   border: 1.5px solid var(--primary);
   border-radius: 50px;
   height: 2.5rem;
