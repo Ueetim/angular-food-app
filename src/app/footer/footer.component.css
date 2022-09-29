@@ -1,10 +1,77 @@
-hr, p{
-  color: var(--primary);
-  text-align: center;
-  margin-top: 1rem;
+footer {
+  padding: 5rem 2rem;
+  border-top: 1px solid #ff000083;
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
-hr {
-  border: 1px solid var(--primary);
-  opacity: 0.4;
+.footer-logo {
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.header {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: clamp(30px, 5vw, 35px);
+}
+
+.address {
+  font-size: 1rem;
+  line-height: 30px;
+  color: var(--gray);
+}
+
+.address a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  max-width: 250px;
+  border: 1.5px solid var(--primary);
+  border-radius: 50px;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.input-field input {
+  border: none;
+  height: 100%;
+  width: calc(100% - 2.5rem);
+  background-color: transparent;
+  outline: none;
+  padding: 0 1rem;
+}
+
+.input-field input, .input-field input::placeholder {
+  font-size: 1rem;
+}
+
+.input-field button {
+  height: 100%;
+  width: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.input-field button:hover {
+  background-color: #b80808;
+  transition: .2s;
+}
+
+@media only screen and (max-width: 500px){
+  footer {
+    text-align: center;
+  }
+
+  .input-field {
+    margin: auto;
+    margin-top: 0.5rem;
+  }
 }
