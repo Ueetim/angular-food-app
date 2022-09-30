@@ -32,10 +32,6 @@
   right: 0px;
 }
 
-.hero-txt {
-  /* position: relative; */
-}
-
 .hero-txt h1 {
   /* font-size: 4rem; */
   font-size: clamp(2rem, 5vw, 4rem);
@@ -54,7 +50,7 @@
 .hero-txt p {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   line-height: clamp(30px, 5vw, 35px);
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 .hero-txt button {
@@ -66,7 +62,7 @@
   color: white;
   border: none;
   border-radius: 3px;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   cursor: pointer;
   transition: .2s;
 }
