@@ -2,22 +2,31 @@
   <div class="logo">
     <a href="#">Food Fusion</a>
   </div>
+
+  <!-- dropdown toggle -->
+  <input type="checkbox" name="" id="check" #navItems>
+  <label for="check" class="nav-item nav-btn dflex a-center j-center" data-aos="fade-up" data-aos-duration="600">
+    <div class="menu-btn"></div>
+  </label>
+
+  <!-- dropdown toggle ends -->
+
   <div class="nav-links">
     <ul>
       <li>
-        <a href="">Home</a>
+        <a routerLink="." fragment="home" (click)="hide(navItems)">Home</a>
       </li>
       <li>
-        <a href="">About</a>
+        <a routerLink="." fragment="food" (click)="hide(navItems)">Food</a>
       </li>
       <li>
-        <a href="">Food</a>
+        <a routerLink="." fragment="about" (click)="hide(navItems)">About</a>
       </li>
       <li>
-        <a href="">Contact</a>
+        <a routerLink="." fragment="contact" (click)="hide(navItems)">Contact</a>
       </li>
-      <li>
-        <button routerLink="/products"><i class="fas fa-cart-plus"></i> Shop</button>
+      <li class="btn">
+        <button routerLink="/products" (click)="hide(navItems)"><i class="fas fa-cart-plus"></i> Shop</button>
       </li>
     </ul>
   </div>

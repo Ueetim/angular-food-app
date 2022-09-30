@@ -41,13 +41,108 @@ nav ul button {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: var(--primary);
+  color: white;
   border-radius: 3px;
   transition: .2s;
 }
 
 nav ul button:hover {
-  background-color: var(--primary);
+  background-color: #a00707;
   color: white;
   transition: .2s;
+}
+
+/* mobile toggle */
+.menu-btn {
+  width: 1.2rem;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.menu-btn:before,
+.menu-btn:after {
+  background-color: black;
+  content: '';
+  display: block;
+  height: 2px;
+  transition: all 200ms ease-in-out;
+}
+.menu-btn:before {
+  box-shadow: 0 7px 0 black;
+  margin-bottom: 12px;
+}
+#check:checked + .nav-btn .menu-btn:before {
+  box-shadow: 0 0 0 #fff;
+  transform: translateY(5px) rotate(45deg);
+}
+#check:checked + .nav-btn > .menu-btn:after{
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* mobile toggle ends */
+
+@media only screen and (max-width: 600px){
+  .nav-links {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 2px 5px #00000038;
+    width: 100%;
+    padding: 1rem 0;
+    height: 0;
+    overflow: hidden;
+    animation: slide_up .2s ease-in forwards;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  #check:checked ~ .nav-links {
+    visibility: visible;
+    animation: slide_down .2s ease-in forwards;
+  }
+
+  @keyframes slide_down {
+    from {
+      height: 0;
+    }
+    to {
+      height: 250px;
+    }
+  }
+
+  @keyframes slide_up {
+    0% {
+      height: 250px;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    width: 100vw;
+    padding: 0 2.5rem;
+  }
+
+  ul button {
+    width: calc(100vw - 5rem);
+  }
 }

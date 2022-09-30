@@ -12,4 +12,9 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  hide(param:any):void{
+    console.log(param);
+    param.checked = false;
+  }
+
 }
