@@ -1,1 +1,73 @@
-<p>checkout works!</p>
+<app-header></app-header>
+
+<div class="container">
+  <h2>Checkout</h2>
+  <div class="sections">
+    <div class="summary">
+      <h3>Order Summary</h3>
+      <ul>
+        <li class="product" *ngFor="let item of items.items">
+          <div class="product-details">
+            <div class="img">
+              <img src="{{item.food.imageUrl}}" alt="">
+            </div>
+            <div>
+              <p><strong>{{item.food.name}}</strong></p>
+              <p>&times;{{item.quantity}}</p>
+            </div>
+          </div>
+          <p>₦{{item.itemPrice}}</p>
+        </li>
+
+        <li class="ship shipping-fees">
+          <p>Shipping fees: </p>
+          <p>₦1000</p>
+        </li>
+        <li class="ship">
+          <p><strong>Total:</strong> </p>
+          <p><strong>₦{{total + 1000}}</strong></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="shipping">
+      <h3>Shipping Details</h3>
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+        <div>
+          <label for="name">
+            Name
+          </label>
+          <input id="name" type="text" formControlName="name">
+        </div>
+
+        <div>
+          <label for="email">
+            Email
+          </label>
+          <input id="email" type="text" formControlName="email">
+        </div>
+
+        <div>
+          <label for="address">
+            Address
+          </label>
+          <input id="address" type="text" formControlName="address">
+        </div>
+
+        <div>
+          <label for="method">
+            <select name="" id="" formControlName="method">
+              <option value="">Pay on delivery</option>
+            </select>
+          </label>
+        </div>
+
+        <button class="button" type="submit">Purchase</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
