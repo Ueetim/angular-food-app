@@ -12,17 +12,14 @@ export class CartPageComponent implements OnInit {
 
   cart!: Cart;
 
-  options:number[] = [];
-
   totalPrice!: number;
+
+  cartLength: any;
 
   constructor(private cartService: CartService) {
     this.setCart();
 
-    // array of numbers for options list
-    for (let i = 1; i <= 20; i++){
-      this.options.push(i);
-    }
+    this.cartLength = localStorage.getItem('itemsLength');
   }
 
   ngOnInit(): void {
@@ -37,6 +34,7 @@ export class CartPageComponent implements OnInit {
   removeFromCart(cartItem:CartItem){
     this.cartService.removeFromCart(cartItem.food.id);
     this.setCart(); // refresh the cart
+    this.cartLength = localStorage.getItem('itemsLength');
   }
 
   changeQuantity(cartItem:CartItem, quantityInString:string) {
@@ -47,6 +45,7 @@ export class CartPageComponent implements OnInit {
 
   clearCart(){
     this.cart = this.cartService.clearCart();
+    this.cartLength = localStorage.getItem('itemsLength');
   }
 
   total() {

@@ -9,7 +9,7 @@ import { Food } from 'src/app/shared/models/food';
 export class CartService {
   cart:Cart;
 
-  cartLength:number = 0;
+  cartLength:any;
 
   constructor() {
     if (localStorage.getItem('cart')){
@@ -17,27 +17,34 @@ export class CartService {
     } else {
       this.cart = new Cart();
     }
+
+    this.cartLength = this.cart.items.length;
+    localStorage.setItem('itemsLength', this.cartLength);
   }
 
   addToCart(food: Food):void{
     // check if food already exists in cart
-    let cartItem = this.cart.items.find(item=>item.food.id === food.id);
-    if (cartItem) {
-      this.changeQuantity(food.id, cartItem.quantity + 1);
-      return;
-    }
+    // let cartItem = this.cart.items.find(item=>item.food.id === food.id);
+    // if (cartItem) {
+    //   this.changeQuantity(food.id, cartItem.quantity + 1);
+
+    //   this.cartLength = this.cart.items.length;
+    //   localStorage.setItem('itemsLength', this.cartLength);
+    //   return;
+    // }
 
     // if food doesnt exist
     this.cart.items.push(new CartItem(food));
     this.cartLength++;
+    localStorage.setItem('itemsLength', this.cartLength);
 
     localStorage.setItem('cart', JSON.stringify(this.cart));
-    console.log(this.cart);
   }
 
   removeFromCart(foodId:number): void {
     this.cart.items = this.cart.items.filter(item => item.food.id != foodId);
     this.cartLength--;
+    localStorage.setItem('itemsLength', this.cartLength);
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
@@ -58,6 +65,10 @@ export class CartService {
   clearCart(){
     this.cart = new Cart();
     localStorage.setItem('cart', JSON.stringify(this.cart));
+
+    this.cartLength = 0;
+    localStorage.setItem('itemsLength', this.cartLength);
+
     return this.cart;
   }
 
