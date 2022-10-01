@@ -25,6 +25,7 @@ import { NavComponent } from './landing-page/nav/nav.component';
 import { HeroComponent } from './landing-page/hero/hero.component';
 import { AboutComponent } from './landing-page/about/about.component';
 import { FoodComponent } from './landing-page/food/food.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FoodComponent } from './landing-page/food/food.component';
     NavComponent,
     HeroComponent,
     AboutComponent,
-    FoodComponent
+    FoodComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
