@@ -6,6 +6,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'cart-page', component: CartPageComponent },
   { path: 'error', component: ErrorPageComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'order', component: SuccessComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 

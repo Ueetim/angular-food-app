@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart/cart.service';
 import { Cart } from '../shared/models/Cart';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -22,7 +23,8 @@ export class CheckoutComponent implements OnInit {
   });
 
   constructor(private cartService: CartService,
-    private formBuilder: FormBuilder) {
+    private formBuilder: FormBuilder,
+    private router: Router) {
     this.items = this.cartService.getCart();
 
     this.total = this.cartService.totalPrice();
@@ -37,6 +39,7 @@ export class CheckoutComponent implements OnInit {
     // Process checkout data here
     // this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted', this.checkoutForm.value.name);
+    this.router.navigate(['/order'])
     // this.checkoutForm.reset();
   }
 }

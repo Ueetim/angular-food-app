@@ -26,6 +26,7 @@ import { HeroComponent } from './landing-page/hero/hero.component';
 import { AboutComponent } from './landing-page/about/about.component';
 import { FoodComponent } from './landing-page/food/food.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HeroComponent,
     AboutComponent,
     FoodComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
