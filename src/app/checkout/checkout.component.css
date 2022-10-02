@@ -5,6 +5,7 @@
 h2 {
   text-align: center;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -18,11 +19,14 @@ ul {
 
 .sections {
   display: flex;
+  gap: 2rem;
   width: 100%;
 }
 
 .sections > div {
   width: 50%;
+  height: 450px;
+  overflow-y: auto;
 }
 
 .summary .img {
@@ -60,7 +64,19 @@ ul > li {
 }
 
 .product:nth-child(odd){
-  background-color: #e2e2e2;
+  background-color: #f2f2f2;
+}
+
+
+.sections > div::-webkit-scrollbar{
+  width: 5px;
+  background-color: white;
+}
+
+.sections > div::-webkit-scrollbar-thumb{
+  background-color: #a9a9a9;
+  border-radius: 3px;
+  width: 100%;
 }
 
 .ship {
@@ -71,4 +87,74 @@ ul > li {
 .shipping-fees {
   padding-top: 1rem;
   /* border-top: 1px solid var(--primary); */
+}
+
+/* SHIPPING DETAILS */
+.shipping label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.shipping input, .shipping select {
+  border: 1px solid #dadada;
+  background-color: transparent;
+  border-radius: 3px;
+  outline: none;
+  height: 40px;
+  padding: 0 0.5rem;
+  transition: .2s;
+}
+
+/* .shipping input:focus {
+  box-shadow: 0 0 0 4px #ff00002d;
+  transition: .2s;
+} */
+
+.shipping input:invalid {
+  border-left: 5px solid #b10303;
+}
+
+.shipping input:valid {
+  border-left: 5px solid green;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.shipping button {
+  height: 40px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.shipping button:hover {
+  background-color: #a10505;
+  transition: .2s;
+}
+
+.shipping button:disabled {
+  background-color: #aaaaaa;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 800px) {
+  .sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sections > div {
+    width: 100%;
+    max-width: 500px;
+  }
 }

@@ -38,32 +38,33 @@
           <label for="name">
             Name
           </label>
-          <input id="name" type="text" formControlName="name">
+          <input id="name" type="text" placeholder="Enter your first and last names" formControlName="name" autofocus required>
         </div>
 
         <div>
           <label for="email">
             Email
           </label>
-          <input id="email" type="text" formControlName="email">
+          <input id="email" type="email" placeholder="Enter your email address" formControlName="email" required email>
         </div>
 
         <div>
           <label for="address">
             Address
           </label>
-          <input id="address" type="text" formControlName="address">
+          <input id="address" placeholder="Enter delivery address" type="text" formControlName="address" required>
         </div>
 
         <div>
           <label for="method">
-            <select name="" id="" formControlName="method">
-              <option value="">Pay on delivery</option>
-            </select>
+            Payment Method
           </label>
+          <select name="" id="" formControlName="method">
+            <option value="">Pay on delivery</option>
+          </select>
         </div>
 
-        <button class="button" type="submit">Purchase</button>
+        <button class="button" type="submit" [disabled]="!checkoutForm.valid">Confirm Order</button>
 
       </form>
     </div>
