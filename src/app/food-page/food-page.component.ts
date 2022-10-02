@@ -38,7 +38,11 @@ export class FoodPageComponent implements OnInit {
 
   addToCart(){
     this.cartService.addToCart(this.food);
-    this.router.navigateByUrl('/cart-page');
+
+    let currentUrl = this.router.url;
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate([currentUrl]);
   }
 
 
