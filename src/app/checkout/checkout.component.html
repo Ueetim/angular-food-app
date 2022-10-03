@@ -1,6 +1,13 @@
 <app-header></app-header>
 
-<div class="container">
+<app-not-found
+  [visible]="!(cartService.cart.items.length > 0)"
+  notFoundMessage="Cart is empty! Please add items"
+  resetLinkText="Add Items To Cart"
+  imageUrl="/assets/images/not-found/empty-cart.svg">
+</app-not-found>
+
+<div class="container" *ngIf="cartService.cart.items.length > 0">
   <h2>Checkout</h2>
   <div class="sections">
     <div class="summary">

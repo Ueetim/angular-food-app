@@ -22,7 +22,7 @@ export class CheckoutComponent implements OnInit {
     method: ''
   });
 
-  constructor(private cartService: CartService,
+  constructor(public cartService: CartService,
     private formBuilder: FormBuilder,
     private router: Router) {
     this.items = this.cartService.getCart();
@@ -41,8 +41,9 @@ export class CheckoutComponent implements OnInit {
     this.cartService.cart = new Cart;
     this.cartService.cartLength = this.cartService.cart.items.length;
     localStorage.setItem('itemsLength', this.cartService.cartLength);
+    localStorage.removeItem('cart');
     this.checkoutForm.reset();
 
-    this.router.navigate(['/order'])
+    this.router.navigate(['/order']);
   }
 }
