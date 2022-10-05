@@ -34,8 +34,6 @@ export class FoodPageComponent implements OnInit {
         this.itemInCart = false;
       }
     })
-
-    this.toast.success({detail:"Success Message", summary:"Product successful", duration:5000});
   }
 
   ngOnInit(): void {
@@ -48,6 +46,8 @@ export class FoodPageComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate([currentUrl]);
+
+    this.toast.success({detail:"Success!", summary:"Item added to cart", duration:3000});
   }
 
 

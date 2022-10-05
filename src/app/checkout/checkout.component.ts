@@ -4,6 +4,8 @@ import { Cart } from '../shared/models/Cart';
 import { UntypedFormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { NgToastService } from 'ng-angular-popup';
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -24,7 +26,8 @@ export class CheckoutComponent implements OnInit {
 
   constructor(public cartService: CartService,
     private formBuilder: UntypedFormBuilder,
-    private router: Router) {
+    private router: Router,
+    private toast:NgToastService) {
     this.items = this.cartService.getCart();
 
     this.total = this.cartService.totalPrice();
@@ -45,5 +48,7 @@ export class CheckoutComponent implements OnInit {
     this.checkoutForm.reset();
 
     this.router.navigate(['/order']);
+
+    this.toast.success({detail:"Success!", summary:"Your order has been placed successfully and is currently being processed", duration:5000});
   }
 }

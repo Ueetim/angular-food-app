@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
 import { Food } from '../shared/models/food';
 
+import { NgToastService } from 'ng-angular-popup';
+
 // multiple routes lead to home component. So use ActivatedRoute to know
 // which one to activate
 import { ActivatedRoute } from '@angular/router';
@@ -16,7 +18,15 @@ export class HomeComponent implements OnInit {
   // declare food property
   foods:Food[] = [];
 
-  constructor(private foodService:FoodService, private route:ActivatedRoute) { }
+  constructor(
+    private foodService:FoodService,
+    private route:ActivatedRoute,
+    private toast:NgToastService
+  ) {
+    if (!localStorage.getItem('cart')){
+      this.toast.info({detail:"Welcome!", summary:"To get started, click on an item to add to the cart", duration:5000});
+    }
+  }
 
   ngOnInit(): void {
     // listen for route parameters
@@ -30,8 +40,10 @@ export class HomeComponent implements OnInit {
       } else {
         // fill the food variable with all foods from the food service
         this.foods = this.foodService.getAll();
+
       }
     })
+
 
   }
 
