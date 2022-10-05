@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart/cart.service';
 import { Cart } from '../shared/models/Cart';
-import { FormBuilder } from '@angular/forms';
+import { UntypedFormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,7 +23,7 @@ export class CheckoutComponent implements OnInit {
   });
 
   constructor(public cartService: CartService,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private router: Router) {
     this.items = this.cartService.getCart();
 
