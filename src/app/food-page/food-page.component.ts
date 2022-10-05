@@ -4,6 +4,8 @@ import { Food } from '../shared/models/food';
 import { FoodService } from '../services/food/food.service';
 import { CartService } from '../services/cart/cart.service';
 
+import { NgToastService } from 'ng-angular-popup';
+
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
@@ -17,7 +19,8 @@ export class FoodPageComponent implements OnInit {
   constructor(private activatedRoute:ActivatedRoute,
     private foodService: FoodService,
     private cartService: CartService,
-    private router:Router) {
+    private router:Router,
+    private toast:NgToastService) {
     activatedRoute.params.subscribe((params)=>{
       if (params?.['id']) {
         this.food = foodService.getFoodById(params?.['id']);
@@ -31,6 +34,8 @@ export class FoodPageComponent implements OnInit {
         this.itemInCart = false;
       }
     })
+
+    this.toast.success({detail:"Success Message", summary:"Product successful", duration:5000});
   }
 
   ngOnInit(): void {

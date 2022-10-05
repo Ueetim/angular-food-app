@@ -28,6 +28,7 @@ import { AboutComponent } from './landing-page/about/about.component';
 import { FoodComponent } from './landing-page/food/food.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuccessComponent } from './success/success.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { SuccessComponent } from './success/success.component';
     AppRoutingModule,
     RatingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgToastModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
