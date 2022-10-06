@@ -39,3 +39,10 @@ router-outlet + * {
     opacity: 1;
   }
 }
+
+
+@media (max-width: 400px) {
+  lib-ng-toast, lib-ng-toast * {
+    display: none;
+  }
+}
