@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
     private route:ActivatedRoute,
     private toast:NgToastService
   ) {
-    if (!localStorage.getItem('cart')){
-      this.toast.info({detail:"Welcome!", summary:"To get started, click on an item to add to the cart", duration:5000});
-    }
+    // if(!localStorage.getItem('cart')){
+    //   this.toast.info({detail:"Welcome!", summary:"To get started, click on an item to add to the cart", duration:5000});
+    // }
   }
 
   ngOnInit(): void {

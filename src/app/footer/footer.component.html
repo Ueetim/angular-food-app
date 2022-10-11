@@ -21,10 +21,10 @@
     </div>
     <div class="footer-con">
       <p class="header"><strong>Subscribe To Our Newsletter</strong></p>
-      <div class="input-field">
-        <input type="email" placeholder="Enter your email">
-        <button><i class="fas fa-arrow-right"></i></button>
-      </div>
+      <form class="input-field" [formGroup]="subscribeForm">
+        <input type="email" placeholder="Enter your email" formControlName="email" email #email required>
+        <button type="button" (click)="emailSubscription(email)"><i class="fas fa-arrow-right"></i></button>
+      </form>
     </div>
   </div>
   <p>&copy; {{year}} All Rights Reserved</p>

@@ -46,6 +46,7 @@ footer > p {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .input-field input {

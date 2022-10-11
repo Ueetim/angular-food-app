@@ -40,7 +40,7 @@ export class CheckoutComponent implements OnInit {
 
   onSubmit(): void {
     // Process checkout data here
-    console.warn('Your order has been submitted', this.checkoutForm.value.name);
+    // console.warn('Your order has been submitted', this.checkoutForm.value.name);
     this.cartService.cart = new Cart;
     this.cartService.cartLength = this.cartService.cart.items.length;
     localStorage.setItem('itemsLength', this.cartService.cartLength);
@@ -49,6 +49,6 @@ export class CheckoutComponent implements OnInit {
 
     this.router.navigate(['/order']);
 
-    this.toast.success({detail:"Success!", summary:"Your order has been placed successfully and is currently being processed", duration:5000});
+    // this.toast.success({detail:"Success!", summary:"Your order has been placed successfully and is currently being processed", duration:5000});
   }
 }
