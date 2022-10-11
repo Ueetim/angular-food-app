@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { Location, PathLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -59,7 +59,7 @@ import { NgToastModule } from 'ng-angular-popup';
     ReactiveFormsModule,
     NgToastModule
   ],
-  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
